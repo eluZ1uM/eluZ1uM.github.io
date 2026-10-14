@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eluZ1uM Technologies — Small studio. Focused software.</title>
+<meta name="description" content="eluZ1uM Technologies is an independent software studio building focused Windows apps: Scribnox for writers, Helmavio for AI agents, and Pushup Battle.">
+<meta property="og:title" content="eluZ1uM Technologies — Small studio. Focused software.">
+<meta property="og:description" content="Independent software studio building focused Windows apps: Scribnox, Helmavio and Pushup Battle.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eluz1um.github.io/">
+<meta property="og:image" content="https://eluz1um.github.io/assets/og.png">
+<meta name="theme-color" content="#0b0c14">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script>
+  // Theme and language before first paint (saved choice, else the system's).
+  (function () {
+    var d = document.documentElement, t = null, l = null;
+    try { t = localStorage.getItem('elz-theme'); l = localStorage.getItem('elz-lang'); } catch (e) {}
+    d.dataset.theme = t || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    d.lang = l || ((navigator.language || '').toLowerCase().startsWith('ru') ? 'ru' : 'en');
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#products" data-i18n="skip">Skip to products</a>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="eluZ1uM Technologies — home">
+      <img src="assets/logo.svg" alt="" width="34" height="34">
+      <span>eluZ1uM <b>Technologies</b></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#products" data-i18n="nav.products">Products</a>
+      <a href="#principles" data-i18n="nav.principles">Principles</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="tools">
+      <button class="pill" id="lang" type="button" aria-label="Language / Язык"><span data-lang="en">EN</span><span data-lang="ru">RU</span></button>
+      <button class="icon" id="theme" type="button" aria-label="Light / dark">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="glow g1"></div><div class="glow g2"></div>
+    <div class="wrap hero-in">
+      <div class="hero-copy reveal">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Independent software studio · Glasgow, UK</p>
+        <h1><span data-i18n="hero.h1a">Small studio.</span><br><em data-i18n="hero.h1b">Focused software.</em></h1>
+        <p class="lead" data-i18n="hero.lead">We build calm, capable Windows apps for people who make things — writers, builders and doers. Every app is designed, built and taken through Microsoft Store certification by one independent maker.</p>
+        <div class="cta">
+          <a class="btn primary" href="#products" data-i18n="hero.cta1">See our apps</a>
+          <a class="btn ghost" href="https://apps.microsoft.com/detail/9PL5TT6W1RSF" target="_blank" rel="noopener" data-i18n="hero.cta2">Get Scribnox</a>
+          <a class="btn ghost" href="https://apps.microsoft.com/detail/9NWDJV026M44" target="_blank" rel="noopener" data-i18n="hero.cta3">Get Helmavio</a>
+        </div>
+        <ul class="facts">
+          <li><b>2</b> <span data-i18n="facts.live">apps on the Microsoft Store</span></li>
+          <li><b>1</b> <span data-i18n="facts.dev">in development</span></li>
+        </ul>
+      </div>
+      <div class="hero-art reveal" aria-hidden="true">
+        <div class="shot back"><img src="assets/helmavio.webp" alt="" width="1600" height="900"></div>
+        <div class="shot front"><img src="assets/scribnox.webp" alt="" width="1600" height="1000"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="products">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow" data-i18n="products.eyebrow">What we make</p>
+        <h2 data-i18n="products.h2">Three products. One standard.</h2>
+      </header>
+
+      <!-- Scribnox -->
+      <article class="product reveal" style="--accent:#5f8f6b">
+        <div class="p-copy">
+          <div class="p-name"><img src="assets/scribnox-icon.png" alt="" width="56" height="56"><div><h3>Scribnox</h3><span class="tag live" data-i18n="tag.live">On the Microsoft Store</span></div></div>
+          <p class="p-tagline" data-i18n="sx.tagline">From manuscript to finished book.</p>
+          <p data-i18n="sx.text">A quiet writing studio for Windows. Paste or import your manuscript and Scribnox lays it out as a real book — chapters, cover, title page — ready for readers and stores.</p>
+          <ul class="ticks">
+            <li data-i18n="sx.b1">Write, edit and see your book as a printed spread</li>
+            <li data-i18n="sx.b2">EPUB, PDF, DOCX and FB2 for stores like Amazon KDP, Apple Books and Litres (Pro)</li>
+            <li data-i18n="sx.b3">Optional AI with your own key — paragraphs and chapters placed for you, your words never rewritten</li>
+          </ul>
+          <div class="p-cta">
+            <a class="store-badge" href="https://apps.microsoft.com/detail/9PL5TT6W1RSF?mode=full" target="_blank" rel="noopener"><img data-badge src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" width="166" height="52"></a>
+          </div>
+        </div>
+        <figure class="p-shot"><img src="assets/scribnox.webp" alt="Scribnox showing a book as a two-page spread" width="1600" height="1000" loading="lazy"></figure>
+      </article>
+
+      <!-- Helmavio -->
+      <article class="product flip reveal" style="--accent:#4f7dff">
+        <div class="p-copy">
+          <div class="p-name"><img src="assets/helmavio-icon.png" alt="" width="56" height="56"><div><h3>Helmavio</h3><span class="tag live" data-i18n="tag.live">On the Microsoft Store</span></div></div>
+          <p class="p-tagline" data-i18n="hm.tagline">Your AI agents, under your control.</p>
+          <p data-i18n="hm.text">An AI agent workspace for Windows. Describe what you need in plain words; Helmavio drafts a plan with clear completion criteria, picks the agents, runs the steps and checks the result.</p>
+          <ul class="ticks">
+            <li data-i18n="hm.b1">Plans with a Definition of Done, checked automatically</li>
+            <li data-i18n="hm.b2">Agents work in a sandbox — anything outside asks for your approval</li>
+            <li data-i18n="hm.b3">Monitoring, history and evidence for every mission</li>
+          </ul>
+          <div class="p-cta"><a class="store-badge" href="https://apps.microsoft.com/detail/9NWDJV026M44?mode=full" target="_blank" rel="noopener"><img data-badge src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" width="166" height="52"></a></div>
+        </div>
+        <figure class="p-shot"><img src="assets/helmavio.webp" alt="Helmavio mission plan with completion criteria" width="1600" height="900" loading="lazy"></figure>
+      </article>
+
+      <!-- Pushup Battle -->
+      <article class="product reveal" style="--accent:#ff5a7a">
+        <div class="p-copy">
+          <div class="p-name"><img src="assets/pushup-icon.png" alt="" width="56" height="56"><div><h3>Pushup Battle</h3><span class="tag dev" data-i18n="tag.dev">In development</span></div></div>
+          <p class="p-tagline" data-i18n="pb.tagline">Push-up duels, live.</p>
+          <p data-i18n="pb.text">A 1v1 online fitness game. Two players, two cameras, one timer — the app counts every rep and the better set wins.</p>
+          <ul class="ticks">
+            <li data-i18n="pb.b1">Live video of your opponent during the battle</li>
+            <li data-i18n="pb.b2">Reps counted on your device by pose detection — no cloud analysis</li>
+            <li data-i18n="pb.b3">iPhone first, then Windows and Android</li>
+          </ul>
+        </div>
+        <figure class="p-shot battle" aria-label="Pushup Battle interface concept">
+          <svg viewBox="0 0 800 500" role="img" aria-hidden="true">
+            <defs>
+              <linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#2f6bff"/><stop offset=".58" stop-color="#3fe0ff"/><stop offset=".6" stop-color="#ff7a3d"/><stop offset="1" stop-color="#ff2e63"/></linearGradient>
+              <radialGradient id="l" cx=".3" cy=".6" r=".7"><stop offset="0" stop-color="#1b2550"/><stop offset="1" stop-color="#090b16"/></radialGradient>
+              <radialGradient id="r" cx=".7" cy=".6" r=".7"><stop offset="0" stop-color="#4a1630"/><stop offset="1" stop-color="#0d0910"/></radialGradient>
+              <filter id="gl"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <rect width="400" height="500" fill="url(#l)"/><rect x="400" width="400" height="500" fill="url(#r)"/>
+            <rect x="399" width="2" height="500" fill="#3fe0ff" opacity=".6"/>
+            <rect x="24" y="72" width="752" height="14" rx="7" fill="url(#bar)"/>
+            <text x="32" y="48" fill="#cfe0ff" font-family="Inter,Arial" font-size="15" font-weight="700" letter-spacing="2">YOU</text>
+            <text x="768" y="48" fill="#ffc2cf" font-family="Inter,Arial" font-size="15" font-weight="700" letter-spacing="2" text-anchor="end">RIVAL</text>
+            <circle cx="400" cy="44" r="26" fill="#0b0c14" stroke="#b26bff" stroke-width="3"/>
+            <text x="400" y="51" fill="#fff" font-family="Inter,Arial" font-size="18" font-weight="700" text-anchor="middle">0:24</text>
+            <!-- pose skeletons -->
+            <g stroke="#3fe0ff" stroke-width="5" stroke-linecap="round" fill="none" filter="url(#gl)">
+              <path d="M70 330 L150 300 L250 302 L330 330 M150 300 L180 370 L270 372 L250 302 M70 330 L80 420 M330 330 L320 420"/>
+            </g>
+            <g fill="#fff"><circle cx="70" cy="330" r="7"/><circle cx="150" cy="300" r="7"/><circle cx="250" cy="302" r="7"/><circle cx="330" cy="330" r="7"/><circle cx="180" cy="370" r="7"/><circle cx="270" cy="372" r="7"/><circle cx="80" cy="420" r="7"/><circle cx="320" cy="420" r="7"/></g>
+            <g stroke="#ff6a8a" stroke-width="5" stroke-linecap="round" fill="none" opacity=".85" filter="url(#gl)">
+              <path d="M470 340 L550 316 L650 318 L730 340 M550 316 L580 380 L670 382 L650 318 M470 340 L480 425 M730 340 L720 425"/>
+            </g>
+            <circle cx="400" cy="260" r="34" fill="#141633" stroke="#8b7bff" stroke-width="3"/>
+            <text x="400" y="270" fill="#fff" font-family="Inter,Arial" font-size="26" font-weight="800" text-anchor="middle">VS</text>
+            <text x="200" y="210" fill="#fff" font-family="Inter,Arial" font-size="96" font-weight="800" text-anchor="middle" filter="url(#gl)">14</text>
+            <text x="600" y="210" fill="#ffd6df" font-family="Inter,Arial" font-size="96" font-weight="800" text-anchor="middle" opacity=".9">11</text>
+            <text x="200" y="128" fill="#8fb4ff" font-family="Inter,Arial" font-size="13" font-weight="700" letter-spacing="3" text-anchor="middle">YOUR REPS</text>
+            <rect x="290" y="452" width="220" height="30" rx="15" fill="#0b1f1c" stroke="#2fd3a0"/>
+            <text x="400" y="472" fill="#2fd3a0" font-family="Inter,Arial" font-size="12" font-weight="700" letter-spacing="2" text-anchor="middle">TRACKING · GOOD FORM</text>
+          </svg>
+        </figure>
+      </article>
+    </div>
+  </section>
+
+  <!-- PRINCIPLES -->
+  <section id="principles" class="principles">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow" data-i18n="pr.eyebrow">How we build</p>
+        <h2 data-i18n="pr.h2">Software that respects your work.</h2>
+      </header>
+      <div class="cards">
+        <div class="card reveal"><span class="ic">◆</span><h3 data-i18n="pr.c1h">Local-first</h3><p data-i18n="pr.c1">Your books and projects live on your device. You decide what leaves it.</p></div>
+        <div class="card reveal"><span class="ic">◇</span><h3 data-i18n="pr.c2h">Bring your own AI</h3><p data-i18n="pr.c2">AI is optional and works with your own API key and the provider you choose.</p></div>
+        <div class="card reveal"><span class="ic">△</span><h3 data-i18n="pr.c3h">Honest pricing</h3><p data-i18n="pr.c3">Free to start. A clear Pro subscription when you need more — no surprises.</p></div>
+        <div class="card reveal"><span class="ic">○</span><h3 data-i18n="pr.c4h">Shipped with care</h3><p data-i18n="pr.c4">Every release is tested and passes Microsoft Store certification before it reaches you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="wrap about-in reveal">
+      <img class="about-logo" src="assets/logo.svg" alt="" width="120" height="120">
+      <div>
+        <p class="eyebrow" data-i18n="ab.eyebrow">About the studio</p>
+        <h2 data-i18n="ab.h2">One maker. Real products.</h2>
+        <p data-i18n="ab.p1">eluZ1uM Technologies is an independent studio from Glasgow, UK. The name plays on “illusion” — and our logo is an impossible triangle — because good software should feel effortless, even when a lot of hard work hides behind it.</p>
+        <p data-i18n="ab.p2">We prefer few, focused products over many half-finished ones, and we ship them where Windows users already look: the Microsoft Store.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap contact-in reveal">
+      <h2 data-i18n="ct.h2">Questions, ideas or feedback?</h2>
+      <p data-i18n="ct.p">Write to us — a real person reads every message.</p>
+      <p class="mail"><span>ooooooo532@gmail.com</span></p>
+      <div class="cta center">
+        <a class="btn primary" href="mailto:ooooooo532@gmail.com" data-i18n="ct.btn">Email the studio</a>
+        <a class="btn ghost" href="https://github.com/eluZ1uM" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span>© <span id="year">2026</span> eluZ1uM Technologies</span>
+    <span data-i18n="ft.made">Made in Glasgow for Windows.</span>
+    <a href="https://apps.microsoft.com/detail/9PL5TT6W1RSF" target="_blank" rel="noopener">Scribnox</a> · <a href="https://apps.microsoft.com/detail/9NWDJV026M44" target="_blank" rel="noopener">Helmavio</a>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
