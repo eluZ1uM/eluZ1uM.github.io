@@ -44,7 +44,7 @@ function setLang(lang) {
   root.lang = lang;
   const dict = lang === "ru" ? RU : EN;
   document.querySelectorAll("[data-i18n]").forEach((el) => { const v = dict[el.dataset.i18n]; if (v) el.textContent = v; });
-  document.querySelectorAll("img[data-badge]").forEach((b) => { b.src = "https://get.microsoft.com/images/" + (lang === "ru" ? "ru-ru" : "en-us") + "%20" + (root.dataset.theme === "light" ? "dark" : "light") + ".svg"; b.alt = lang === "ru" ? "Скачать в Microsoft Store" : "Get it from Microsoft"; });
+  document.querySelectorAll("img[data-badge]").forEach((b) => { b.src = "https://get.microsoft.com/images/" + (lang === "ru" ? "ru" : "en-us") + "%20" + (root.dataset.theme === "light" ? "dark" : "light") + ".svg"; b.alt = lang === "ru" ? "Скачать в Microsoft Store" : "Get it from Microsoft"; });
   document.title = lang === "ru" ? "eluZ1uM Technologies — Маленькая студия. Точные программы." : "eluZ1uM Technologies — Small studio. Focused software.";
   try { localStorage.setItem("elz-lang", lang); } catch (e) {}
 }
