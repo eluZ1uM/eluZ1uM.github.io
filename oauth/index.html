@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Helmavio sign-in</title>
+<style>
+  :root { color-scheme: dark light; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0b0c14; color: #eef0fb; font: 16px/1.6 system-ui, "Segoe UI", sans-serif; padding: 24px; box-sizing: border-box; }
+  main { max-width: 520px; text-align: center; }
+  p { color: #9aa0bd; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Helmavio</h1>
+  <p id="msg">Returning to Helmavio on this computer…</p>
+</main>
+<script>
+  // Sign-in relay for the Helmavio desktop app: LinkedIn and Instagram send the
+  // owner back here; this page only forwards the one-time code to Helmavio on the
+  // same computer (127.0.0.1). Nothing is stored or sent anywhere else.
+  (function () {
+    var q = new URLSearchParams(location.search);
+    var out = new URLSearchParams();
+    ['code', 'state', 'error', 'error_description'].forEach(function (k) { if (q.has(k)) out.set(k, q.get(k)); });
+    if (!out.has('state')) { document.getElementById('msg').textContent = 'This page is used by the Helmavio app to finish signing in. There is nothing to do here.'; return; }
+    location.replace('http://127.0.0.1:53682/oauth/callback?' + out.toString());
+  })();
+</script>
+</body>
+</html>
