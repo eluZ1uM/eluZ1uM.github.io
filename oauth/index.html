@@ -26,7 +26,10 @@
     var out = new URLSearchParams();
     ['code', 'state', 'error', 'error_description'].forEach(function (k) { if (q.has(k)) out.set(k, q.get(k)); });
     if (!out.has('state')) { document.getElementById('msg').textContent = 'This page is used by the Helmavio app to finish signing in. There is nothing to do here.'; return; }
-    location.replace('http://127.0.0.1:53682/oauth/callback?' + out.toString());
+    // Helmavio puts its local port at the start of state: "<port>.<random>".
+    var m = /^(\d{4,5})\./.exec(out.get('state'));
+    var port = m && +m[1] >= 1024 && +m[1] <= 65535 ? m[1] : '53682';
+    location.replace('http://127.0.0.1:' + port + '/oauth/callback?' + out.toString());
   })();
 </script>
 </body>
