@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-title-en="Helmavio — your own AI team for Windows" data-title-ru="Helmavio — своя команда ИИ-агентов для Windows">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Helmavio — your own AI team for Windows</title>
+<meta name="description" content="Helmavio is an AI agent workspace for Windows: describe a goal, and your own team of agents plans, runs and proves the work — with your approval.">
+<meta property="og:title" content="Helmavio — your own AI team for Windows">
+<meta property="og:description" content="Helmavio is an AI agent workspace for Windows: describe a goal, and your own team of agents plans, runs and proves the work — with your approval.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eluz1um.github.io/helmavio/">
+<meta property="og:image" content="https://eluz1um.github.io/assets/og.png">
+<meta name="theme-color" content="#0b0c14">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+<script>
+  (function () {
+    var d = document.documentElement, t = null, l = null;
+    try { t = localStorage.getItem('elz-theme'); l = localStorage.getItem('elz-lang'); } catch (e) {}
+    d.dataset.theme = t || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    d.lang = l || ((navigator.language || '').toLowerCase().startsWith('ru') ? 'ru' : 'en');
+  })();
+</script>
+</head>
+<body class="subpage" style="--accent:#4f7dff">
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="../" aria-label="eluZ1uM Technologies — home">
+      <img src="../assets/logo.svg" alt="" width="34" height="34">
+      <span>eluZ1uM <b>Technologies</b></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="../#products" data-i18n="nav.products">Products</a>
+      <a href="../scribnox/">Scribnox</a>
+      <a href="../helmavio/">Helmavio</a>
+      <a href="../#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="tools">
+      <button class="pill" id="lang" type="button" aria-label="Language / Язык"><span data-lang="en">EN</span><span data-lang="ru">RU</span></button>
+      <button class="icon" id="theme" type="button" aria-label="Light / dark">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="top">
+
+<section class="hero sub-hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap hero-in">
+    <div class="hero-copy reveal">
+      <a class="back" href="../#products" data-i18n="sub.back">← All products</a>
+      <div class="p-name"><img src="../assets/helmavio-icon.png" alt="" width="56" height="56"><div><h3>Helmavio</h3><span class="tag live" data-i18n="tag.live">On the Microsoft Store</span></div></div>
+      <h1><span data-i18n="hm.h1a">Your own AI team.</span><br><em data-i18n="hm.h1b">Built your way.</em></h1>
+      <p class="lead" data-i18n="hm.lead">Helmavio is not one more chatbot. It is a workspace where you assemble your own team of AI agents and give it real work. Describe a goal in plain words — Helmavio plans it, hands the steps to the right agents, runs them and proves the result. What your team can do is limited only by the agents and models you connect.</p>
+      <div class="cta"><a class="store-badge" href="https://apps.microsoft.com/detail/9NWDJV026M44?mode=full" target="_blank" rel="noopener"><img data-badge src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" width="166" height="52"></a><a class="btn ghost" href="#potential" data-i18n="hm.cta2">See what it can do</a></div>
+    </div>
+    <div class="hero-art single reveal" aria-hidden="true"><div class="shot front"><img src="../assets/hm/en-1-home.webp" data-src-en="../assets/hm/en-1-home.webp" data-src-ru="../assets/hm/ru-1-home.webp" alt="" width="1600" height="900" loading="lazy"></div></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <header class="sec-head reveal"><p class="eyebrow" data-i18n="hm.how.eye">How it works</p><h2 data-i18n="hm.how.h2">From a sentence to verified work.</h2></header>
+    <ol class="steps">
+      <li class="reveal"><b>1</b><h3 data-i18n="hm.s1h">Say what you need</h3><p data-i18n="hm.s1p">Write the goal the way you would explain it to a colleague. No prompts to engineer, no agents to pick by hand.</p></li>
+      <li class="reveal"><b>2</b><h3 data-i18n="hm.s2h">Review the plan</h3><p data-i18n="hm.s2p">The Orchestrator drafts a mission with a clear Definition of Done, the team, tools, approvals and risk — and shows it to you before anything runs.</p></li>
+      <li class="reveal"><b>3</b><h3 data-i18n="hm.s3h">Get proven results</h3><p data-i18n="hm.s3p">Agents do the work. An independent Reviewer checks it against every criterion and keeps a proof receipt you can replay step by step.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="potential" class="band alt">
+  <div class="wrap">
+    <header class="sec-head reveal"><p class="eyebrow" data-i18n="hm.pot.eye">The real potential</p><h2 data-i18n="hm.pot.h2">Connect any agent. Grow any capability.</h2><p class="sec-lead" data-i18n="hm.pot.lead">Helmavio is a platform: every agent and model you add becomes a new skill of your team. Start with the built-in roles and expand as far as your ideas go.</p></header>
+    <div class="cards c3">
+<div class="card reveal"><span class="ic">◆</span><h3 data-i18n="hm.c1h">Built-in roles</h3><p data-i18n="hm.c1p">Orchestrator plans, Researcher / Analyst studies and structures information, Operator does the hands-on work, Reviewer verifies it. They work out of the box.</p></div>
+<div class="card reveal"><span class="ic">◇</span><h3 data-i18n="hm.c2h">Your own agents</h3><p data-i18n="hm.c2p">Create an agent from a description, import an agent card, or bring in agents from plugins — for example, Claude Code agents you already use.</p></div>
+<div class="card reveal"><span class="ic">△</span><h3 data-i18n="hm.c3h">Ready-made teams</h3><p data-i18n="hm.c3p">Start from team templates: indie game, mobile app release, research, planning and security review — then adjust them to your project.</p></div>
+<div class="card reveal"><span class="ic">○</span><h3 data-i18n="hm.c4h">Tools via MCP</h3><p data-i18n="hm.c4p">Plug in MCP servers to give agents new tools — per project and per tool, with your approval for anything risky.</p></div>
+<div class="card reveal"><span class="ic">◈</span><h3 data-i18n="hm.c5h">Remote agents via A2A</h3><p data-i18n="hm.c5p">Connect agents that live elsewhere through the open A2A protocol, plus GitHub and Telegram connections.</p></div>
+<div class="card reveal"><span class="ic">◎</span><h3 data-i18n="hm.c6h">Any model you choose</h3><p data-i18n="hm.c6p">Local models through Ollama — free and offline; Claude Code with your Claude account; or any OpenAI- or Anthropic-compatible API with your own key.</p></div>
+</div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <header class="sec-head reveal"><p class="eyebrow" data-i18n="hm.ideas.eye">Room for creativity</p><h2 data-i18n="hm.ideas.h2">What people build with Helmavio.</h2><p class="sec-lead" data-i18n="hm.ideas.lead">A few directions to start from. Combine agents, and the same app becomes a studio, a research desk or a release department.</p></header>
+    <div class="cards c3">
+<div class="card reveal"><span class="ic">▲</span><h3 data-i18n="hm.i1h">An indie game studio</h3><p data-i18n="hm.i1p">Strategy, architecture, research, development, QA and certification agents take your game idea forward step by step, while you approve every change.</p></div>
+<div class="card reveal"><span class="ic">■</span><h3 data-i18n="hm.i2h">An app release pipeline</h3><p data-i18n="hm.i2p">Developer, QA and certification agents prepare a build, test it and check store requirements before you submit.</p></div>
+<div class="card reveal"><span class="ic">●</span><h3 data-i18n="hm.i3h">A research desk</h3><p data-i18n="hm.i3p">Market, competitor or topic research with sources, structured into a report you can act on.</p></div>
+<div class="card reveal"><span class="ic">◆</span><h3 data-i18n="hm.i4h">A content team</h3><p data-i18n="hm.i4p">Agents study what works for comparable products and draft posts, plans and scripts — you edit and publish.</p></div>
+<div class="card reveal"><span class="ic">◇</span><h3 data-i18n="hm.i5h">A security review</h3><p data-i18n="hm.i5p">An architecture review, a security check and a critique of the fix plan — findings come with evidence, nothing changes without you.</p></div>
+<div class="card reveal"><span class="ic">✦</span><h3 data-i18n="hm.i6h">Your own workflow</h3><p data-i18n="hm.i6p">Any repeatable work you can describe. Add an agent — gain a capability. Your factory grows with you.</p></div>
+</div>
+  </div>
+</section>
+
+<section class="band alt">
+  <div class="wrap">
+    <header class="sec-head reveal"><p class="eyebrow" data-i18n="hm.ctrl.eye">Visual control</p><h2 data-i18n="hm.ctrl.h2">See everything. Approve what matters.</h2></header>
+    <article class="feature reveal">
+  <div class="f-copy"><p class="eyebrow" data-i18n="hm.f1.eye">Plan first</p><h3 data-i18n="hm.f1.h">Nothing runs until you have seen the plan.</h3><p data-i18n="hm.f1.p">Every mission starts as a contract: the goal, what “done” means, the team, tools, approvals and risk. Edit it, simulate it or run it.</p><ul class="ticks"><li data-i18n="hm.f1.b1">Definition of Done checked automatically</li><li data-i18n="hm.f1.b2">Plain-language goal, no prompt engineering</li></ul></div>
+  <figure class="p-shot"><img src="../assets/hm/en-2-plan.webp" data-src-en="../assets/hm/en-2-plan.webp" data-src-ru="../assets/hm/ru-2-plan.webp" alt="Mission plan with Definition of Done" width="1600" height="900" loading="lazy"></figure>
+</article>
+    <article class="feature flip reveal">
+  <div class="f-copy"><p class="eyebrow" data-i18n="hm.f2.eye">Simulation</p><h3 data-i18n="hm.f2.h">Know the impact before it happens.</h3><p data-i18n="hm.f2.p">A simulation predicts which files, tools and network access a mission will touch, its cost class, its risk and the approvals it will need.</p><ul class="ticks"><li data-i18n="hm.f2.b1">Files, tools, network and cost at a glance</li><li data-i18n="hm.f2.b2">Certainty labels, not guesses</li></ul></div>
+  <figure class="p-shot"><img src="../assets/hm/en-3-simulation.webp" data-src-en="../assets/hm/en-3-simulation.webp" data-src-ru="../assets/hm/ru-3-simulation.webp" alt="Simulation report" width="1600" height="900" loading="lazy"></figure>
+</article>
+    <article class="feature reveal">
+  <div class="f-copy"><p class="eyebrow" data-i18n="hm.f3.eye">Approvals</p><h3 data-i18n="hm.f3.h">Agents work in a sandbox. You hold the keys.</h3><p data-i18n="hm.f3.p">Anything outside the sandbox waits in “Needs attention” with the exact action shown. A live map shows which agent is doing what, and every mission can be replayed later.</p><ul class="ticks"><li data-i18n="hm.f3.b1">Live map of your agents, with replay</li><li data-i18n="hm.f3.b2">Monitoring, history and proof receipts</li><li data-i18n="hm.f3.b3">Keeps working in the background and recovers after crashes</li></ul></div>
+  <figure class="p-shot"><img src="../assets/hm/en-4-approval.webp" data-src-en="../assets/hm/en-4-approval.webp" data-src-ru="../assets/hm/ru-4-approval.webp" alt="Approval request in Needs attention" width="1600" height="900" loading="lazy"></figure>
+</article>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <header class="sec-head reveal"><p class="eyebrow" data-i18n="hm.plans.eye">Plans</p><h2 data-i18n="hm.plans.h2">Free to start. Pro when your factory grows.</h2><p class="sec-lead" data-i18n="hm.plans.lead">Safety is identical on every plan: sandbox, approvals and credential protection are never paywalled.</p></header>
+    <div class="plans">
+      <div class="plan reveal"><h3 data-i18n="hm.free.h">Free</h3><p class="price" data-i18n="hm.free.p">£0</p><ul class="ticks"><li data-i18n="hm.free.b1">The full workflow: plan, simulate, run and review</li><li data-i18n="hm.free.b2">Your own agents, connections and models</li><li data-i18n="hm.free.b3">1 active mission, up to 3 parallel tasks</li><li data-i18n="hm.free.b4">7 days of history</li></ul></div>
+      <div class="plan pro reveal"><h3 data-i18n="hm.pro.h">Pro</h3><p class="price" data-i18n="hm.pro.p">£9 / month</p><p class="price-alt" data-i18n="hm.pro.alt">or £79 / year · £199 Founder lifetime</p><ul class="ticks"><li data-i18n="hm.pro.b1">Several missions at once, up to 8 parallel tasks</li><li data-i18n="hm.pro.b2">Schedules and event triggers — your factory runs on its own</li><li data-i18n="hm.pro.b3">Full history</li><li data-i18n="hm.pro.b4">Mail, Store analytics and Telegram alerts</li></ul></div>
+    </div>
+    <p class="note" data-i18n="hm.req">Requires Windows 10 (1809) or later and an AI model of your choice. A built-in demo works without any model.</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap contact-in reveal">
+    <h2 data-i18n="hm.end.h">Build your first AI team today.</h2>
+    <p data-i18n="hm.end.p">Free on the Microsoft Store. Your projects stay on your PC.</p>
+    <div class="cta center"><a class="store-badge" href="https://apps.microsoft.com/detail/9NWDJV026M44?mode=full" target="_blank" rel="noopener"><img data-badge src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" width="166" height="52"></a></div>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span>© <span id="year">2026</span> eluZ1uM Technologies</span>
+    <a href="../" data-i18n="sub.home">eluZ1uM Technologies — home</a>
+    <a href="https://apps.microsoft.com/detail/9PL5TT6W1RSF" target="_blank" rel="noopener">Scribnox</a> · <a href="https://apps.microsoft.com/detail/9NWDJV026M44" target="_blank" rel="noopener">Helmavio</a>
+  </div>
+</footer>
+<script src="../assets/pages-ru.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -36,6 +36,7 @@ const RU = {
   "ct.h2": "Вопросы, идеи или отзывы?", "ct.p": "Напишите нам — каждое письмо читает живой человек.", "ct.btn": "Написать в студию",
   "ft.made": "Сделано в Глазго для Windows.", "ft.store": "Scribnox в Microsoft Store"
 };
+if (window.RU_EXTRA) Object.assign(RU, window.RU_EXTRA);
 const EN = {};
 const root = document.documentElement;
 document.querySelectorAll("[data-i18n]").forEach((el) => { EN[el.dataset.i18n] = el.textContent; });
@@ -45,7 +46,10 @@ function setLang(lang) {
   const dict = lang === "ru" ? RU : EN;
   document.querySelectorAll("[data-i18n]").forEach((el) => { const v = dict[el.dataset.i18n]; if (v) el.textContent = v; });
   document.querySelectorAll("img[data-badge]").forEach((b) => { b.src = "https://get.microsoft.com/images/" + (lang === "ru" ? "ru" : "en-us") + "%20" + (root.dataset.theme === "light" ? "dark" : "light") + ".svg"; b.alt = lang === "ru" ? "Скачать в Microsoft Store" : "Get it from Microsoft"; });
-  document.title = lang === "ru" ? "eluZ1uM Technologies — Маленькая студия. Точные программы." : "eluZ1uM Technologies — Small studio. Focused software.";
+  const t = root.dataset[lang === "ru" ? "titleRu" : "titleEn"];
+  document.title = t || (lang === "ru" ? "eluZ1uM Technologies — Маленькая студия. Точные программы." : "eluZ1uM Technologies — Small studio. Focused software.");
+  document.querySelectorAll("img[data-src-ru]").forEach((im) => { im.src = lang === "ru" ? im.dataset.srcRu : im.dataset.srcEn; });
+  document.querySelectorAll("img[data-src-light]").forEach((im) => { im.src = root.dataset.theme === "light" ? im.dataset.srcLight : im.dataset.srcDark; });
   try { localStorage.setItem("elz-lang", lang); } catch (e) {}
 }
 document.getElementById("lang").addEventListener("click", () => setLang(root.lang === "ru" ? "en" : "ru"));
