@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /oauth/
+
+Sitemap: https://eluz1um.github.io/sitemap.xml
