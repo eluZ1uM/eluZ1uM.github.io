@@ -1,65 +1,88 @@
 <!doctype html>
-<html lang="en" data-theme="dark" data-title-en="Scribnox — from manuscript to finished book" data-title-ru="Scribnox — от рукописи до готовой книги">
+<html lang="en" data-ru-lang="ru" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Scribnox — from manuscript to finished book</title>
-<meta name="description" content="Scribnox is a writing studio for Windows that turns your manuscript into a finished book — chapters, cover, spread preview and store-ready EPUB, PDF, DOCX and FB2.">
-<meta property="og:title" content="Scribnox — from manuscript to finished book">
-<meta property="og:description" content="Scribnox is a writing studio for Windows that turns your manuscript into a finished book — chapters, cover, spread preview and store-ready EPUB, PDF, DOCX and FB2.">
+<title data-i18n="sx.meta.title">Scribnox — from manuscript to finished book</title>
+<meta name="description" content="Scribnox is a writing studio for Windows that turns your manuscript into a finished book — chapters, cover, spread preview and store-ready EPUB, PDF, DOCX and FB2." data-i18n-attr="content:sx.meta.desc">
+<link rel="canonical" href="https://eluz1um.github.io/scribnox/" data-ru-href="https://eluz1um.github.io/ru/scribnox/">
+<link rel="alternate" hreflang="en" href="https://eluz1um.github.io/scribnox/">
+<link rel="alternate" hreflang="ru" href="https://eluz1um.github.io/ru/scribnox/">
+<link rel="alternate" hreflang="x-default" href="https://eluz1um.github.io/scribnox/">
+<meta property="og:site_name" content="eluZ1uM Technologies">
+<meta property="og:title" content="Scribnox — from manuscript to finished book" data-i18n-attr="content:sx.meta.title">
+<meta property="og:description" content="A writing studio for Windows that turns your manuscript into a finished book — chapters, cover, spread preview and store-ready EPUB, PDF, DOCX and FB2." data-i18n-attr="content:sx.meta.ogdesc">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://eluz1um.github.io/scribnox/">
-<meta property="og:image" content="https://eluz1um.github.io/assets/og.png">
+<meta property="og:url" content="https://eluz1um.github.io/scribnox/" data-ru-content="https://eluz1um.github.io/ru/scribnox/">
+<meta property="og:image" content="https://eluz1um.github.io/assets/og/scribnox-en.png" data-ru-content="https://eluz1um.github.io/assets/og/scribnox-ru.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_GB" data-ru-content="ru_RU">
+<meta property="og:locale:alternate" content="ru_RU" data-ru-content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0b0c14">
 <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="icon" href="../assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" data-ru-href="../assets/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/styles.css">
 <script>
+  // Before first paint: theme (saved, else system) and language (saved, else browser → /ru/).
   (function () {
-    var d = document.documentElement, t = null, l = null;
-    try { t = localStorage.getItem('elz-theme'); l = localStorage.getItem('elz-lang'); } catch (e) {}
+    var d = document.documentElement, t = null, l = null, ok = true;
+    d.className = 'js';
+    try { t = localStorage.getItem('elz-theme'); l = localStorage.getItem('elz-lang'); } catch (e) { ok = false; }
     d.dataset.theme = t || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-    d.lang = l || ((navigator.language || '').toLowerCase().startsWith('ru') ? 'ru' : 'en');
+    var want = l || (/^ru\b/i.test(navigator.language || '') ? 'ru' : '');
+    var alt = ok && want && want !== d.lang && document.querySelector('link[rel="alternate"][hreflang="' + want + '"]');
+    if (alt) location.replace(new URL(alt.href).pathname + location.hash);
   })();
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Scribnox","url":"https://eluz1um.github.io/scribnox/","downloadUrl":"https://apps.microsoft.com/detail/9PL5TT6W1RSF","image":"https://eluz1um.github.io/assets/scribnox.webp","operatingSystem":"Windows","applicationCategory":"ProductivityApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"publisher":{"@type":"Organization","name":"eluZ1uM Technologies","url":"https://eluz1um.github.io/"}}
 </script>
 </head>
 <body class="subpage" style="--accent:#5f8f6b">
+<a class="skip" href="#main" data-i18n="skip.main">Skip to content</a>
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="../" aria-label="eluZ1uM Technologies — home">
+    <a class="brand" href="../" aria-label="eluZ1uM Technologies — home" data-i18n-attr="aria-label:brand.home">
       <img src="../assets/logo.svg" alt="" width="34" height="34">
       <span>eluZ1uM <b>Technologies</b></span>
     </a>
-    <nav class="links" aria-label="Main">
+    <nav class="links" id="links" aria-label="Main" data-i18n-attr="aria-label:nav.main">
       <a href="../#products" data-i18n="nav.products">Products</a>
-      <a href="../scribnox/">Scribnox</a>
+      <a href="../scribnox/" aria-current="page">Scribnox</a>
       <a href="../helmavio/">Helmavio</a>
+      <a href="../#about" data-i18n="nav.about">About</a>
       <a href="../#contact" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="tools">
-      <button class="pill" id="lang" type="button" aria-label="Language / Язык"><span data-lang="en">EN</span><span data-lang="ru">RU</span></button>
-      <button class="icon" id="theme" type="button" aria-label="Light / dark">
+      <a class="pill" id="lang" href="../ru/scribnox/" data-ru-href="../../scribnox/" hreflang="ru" data-ru-hreflang="en" aria-label="Русская версия" data-i18n-attr="aria-label:lang.switch"><span data-lang="en">EN</span><span data-lang="ru">RU</span></a>
+      <button class="icon" id="theme" type="button" aria-label="Switch light / dark theme" data-i18n-attr="aria-label:theme">
         <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
         <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon menu" id="menu" type="button" aria-expanded="false" aria-controls="links" aria-label="Menu" data-i18n-attr="aria-label:menu">
+        <svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
     </div>
   </div>
 </header>
-<main id="top">
+<main id="main">
 
 <section class="hero sub-hero">
   <div class="glow g1"></div><div class="glow g2"></div>
   <div class="wrap hero-in">
     <div class="hero-copy reveal">
       <a class="back" href="../#products" data-i18n="sub.back">← All products</a>
-      <div class="p-name"><img src="../assets/scribnox-icon.png" alt="" width="56" height="56"><div><h3>Scribnox</h3><span class="tag live" data-i18n="tag.live">On the Microsoft Store</span></div></div>
+      <div class="p-name"><img src="../assets/scribnox-icon.png" alt="" width="56" height="56"><div><p class="p-title">Scribnox</p><span class="tag live" data-i18n="tag.live">On the Microsoft Store</span></div></div>
       <h1><span data-i18n="sx.h1a">From manuscript</span><br><em data-i18n="sx.h1b">to finished book.</em></h1>
       <p class="lead" data-i18n="sx.lead">Scribnox is a calm writing studio for Windows. Bring your manuscript — typed, pasted or imported — and watch it become a real book: chapters, a cover, a title page and a printed-style spread. When it is ready, Scribnox packages it for the stores readers actually use.</p>
-      <div class="cta"><a class="store-badge" href="https://apps.microsoft.com/detail/9PL5TT6W1RSF?mode=full" target="_blank" rel="noopener"><img data-badge src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" width="166" height="52"></a><a class="btn ghost" href="#path" data-i18n="sx.cta2">How it works</a></div>
+      <div class="cta"><a class="store-badge" href="https://apps.microsoft.com/detail/9PL5TT6W1RSF?mode=full" target="_blank" rel="noopener"><img data-badge src="https://get.microsoft.com/images/en-us%20light.svg" data-ru-src="https://get.microsoft.com/images/ru%20light.svg" alt="Get Scribnox from Microsoft" data-i18n-attr="alt:badge.sx" width="166" height="52"></a><a class="btn ghost" href="#path" data-i18n="sx.cta2">How it works</a></div>
     </div>
-    <div class="hero-art single reveal" aria-hidden="true"><div class="shot front"><img src="../assets/sx/dark.webp" data-src-dark="../assets/sx/dark.webp" data-src-light="../assets/sx/light.webp" alt="" width="1600" height="900" loading="lazy"></div></div>
+    <div class="hero-art single reveal" aria-hidden="true"><div class="shot front"><img src="../assets/scribnox.webp" data-ru-src="../assets/sx/light.webp" data-ru-height="900" alt="" width="1600" height="1000" fetchpriority="high"></div></div>
   </div>
 </section>
 
@@ -77,9 +100,9 @@
 <section class="band alt">
   <div class="wrap">
     <article class="feature reveal">
-      <div class="f-copy"><p class="eyebrow" data-i18n="sx.f1.eye">A real book, not a document</p><h3 data-i18n="sx.f1.h">See your book the way readers will.</h3><p data-i18n="sx.f1.p">Scribnox lays your manuscript out page by page as a printed spread, so structure, rhythm and length are easy to judge while you write.</p>
+      <div class="f-copy"><p class="eyebrow" data-i18n="sx.f1.eye">A real book, not a document</p><h2 class="h3" data-i18n="sx.f1.h">See your book the way readers will.</h2><p data-i18n="sx.f1.p">Scribnox lays your manuscript out page by page as a printed spread, so structure, rhythm and length are easy to judge while you write.</p>
       <ul class="ticks"><li data-i18n="sx.f1.b1">Prose and verse layouts, type size and spacing</li><li data-i18n="sx.f1.b2">Light and dark themes for long writing sessions</li><li data-i18n="sx.f1.b3">Russian and English — interface and manuscripts</li></ul></div>
-      <figure class="p-shot"><img src="../assets/sx/dark.webp" data-src-dark="../assets/sx/dark.webp" data-src-light="../assets/sx/light.webp" alt="Scribnox showing a book as a two-page spread" width="1600" height="900" loading="lazy"></figure>
+      <figure class="p-shot"><img src="../assets/sx/dark.webp" alt="Scribnox in the dark theme, choosing a cover design for the book" data-i18n-attr="alt:sx.f1.alt" width="1600" height="900" loading="lazy"></figure>
     </article>
   </div>
 </section>
@@ -87,12 +110,12 @@
 <section class="band">
   <div class="wrap">
     <header class="sec-head reveal"><p class="eyebrow" data-i18n="sx.free.eye">Free, for every writer</p><h2 data-i18n="sx.free.h2">A complete writing studio at no cost.</h2></header>
-    <div class="cards c4">
-<div class="card reveal"><span class="ic">◆</span><h3 data-i18n="sx.c1h">Unlimited books</h3><p data-i18n="sx.c1p">Create, duplicate and archive books; chapters and sections you can reorder and rename.</p></div>
-<div class="card reveal"><span class="ic">◇</span><h3 data-i18n="sx.c2h">Automatic chapters</h3><p data-i18n="sx.c2p">Chapter headings are found on your device, without AI, in a single click.</p></div>
-<div class="card reveal"><span class="ic">△</span><h3 data-i18n="sx.c3h">Safe by default</h3><p data-i18n="sx.c3p">Autosave, crash recovery and a full project backup you can restore any time.</p></div>
-<div class="card reveal"><span class="ic">○</span><h3 data-i18n="sx.c4h">Works offline</h3><p data-i18n="sx.c4p">Writing, editing, word counts, local punctuation cleanup and genre analysis need no network.</p></div>
-</div>
+    <div class="cards">
+      <div class="card reveal"><span class="ic" aria-hidden="true">◆</span><h3 data-i18n="sx.c1h">Unlimited books</h3><p data-i18n="sx.c1p">Create, duplicate and archive books; chapters and sections you can reorder and rename.</p></div>
+      <div class="card reveal"><span class="ic" aria-hidden="true">◇</span><h3 data-i18n="sx.c2h">Automatic chapters</h3><p data-i18n="sx.c2p">Chapter headings are found on your device, without AI, in a single click.</p></div>
+      <div class="card reveal"><span class="ic" aria-hidden="true">△</span><h3 data-i18n="sx.c3h">Safe by default</h3><p data-i18n="sx.c3p">Autosave, crash recovery and a full project backup you can restore any time.</p></div>
+      <div class="card reveal"><span class="ic" aria-hidden="true">○</span><h3 data-i18n="sx.c4h">Works offline</h3><p data-i18n="sx.c4p">Writing, editing, word counts, local punctuation cleanup and genre analysis need no network.</p></div>
+    </div>
   </div>
 </section>
 
@@ -100,24 +123,25 @@
   <div class="wrap">
     <header class="sec-head reveal"><p class="eyebrow" data-i18n="sx.ai.eye">AI that respects your words</p><h2 data-i18n="sx.ai.h2">An assistant, not a ghostwriter.</h2><p class="sec-lead" data-i18n="sx.ai.lead">AI in Scribnox is optional and works with your own key from the provider you choose — OpenAI, Anthropic Claude, Google Gemini, Groq or any OpenAI-compatible API. Every change is shown for review before it touches your manuscript.</p></header>
     <div class="cards c3">
-<div class="card reveal"><span class="ic">◆</span><h3 data-i18n="sx.a1h">Paragraphs and chapters</h3><p data-i18n="sx.a1p">Turns a solid wall of text into paragraphs and chapters without rewriting a single word.</p></div>
-<div class="card reveal"><span class="ic">◇</span><h3 data-i18n="sx.a2h">Careful proofreading</h3><p data-i18n="sx.a2p">Spelling and punctuation fixed, your style left alone.</p></div>
-<div class="card reveal"><span class="ic">△</span><h3 data-i18n="sx.a3h">Rewrite and continue</h3><p data-i18n="sx.a3p">Shorten, expand or simplify a chosen chapter, or get a few paragraphs to continue from where you stopped.</p></div>
-<div class="card reveal"><span class="ic">○</span><h3 data-i18n="sx.a4h">Cover and description</h3><p data-i18n="sx.a4p">Generate a cover image and a book description ready for store pages.</p></div>
-<div class="card reveal"><span class="ic">◈</span><h3 data-i18n="sx.a5h">English edition</h3><p data-i18n="sx.a5p">Prepare an English translation of your book.</p></div>
-<div class="card reveal"><span class="ic">◎</span><h3 data-i18n="sx.a6h">Analysis and assistant</h3><p data-i18n="sx.a6p">A deep read of genre and style, and a voice or text assistant for commands.</p></div>
-</div>
+      <div class="card reveal"><span class="ic" aria-hidden="true">◆</span><h3 data-i18n="sx.a1h">Paragraphs and chapters</h3><p data-i18n="sx.a1p">Turns a solid wall of text into paragraphs and chapters without rewriting a single word.</p></div>
+      <div class="card reveal"><span class="ic" aria-hidden="true">◇</span><h3 data-i18n="sx.a2h">Careful proofreading</h3><p data-i18n="sx.a2p">Spelling and punctuation fixed, your style left alone.</p></div>
+      <div class="card reveal"><span class="ic" aria-hidden="true">△</span><h3 data-i18n="sx.a3h">Rewrite and continue</h3><p data-i18n="sx.a3p">Shorten, expand or simplify a chosen chapter, or get a few paragraphs to continue from where you stopped.</p></div>
+      <div class="card reveal"><span class="ic" aria-hidden="true">○</span><h3 data-i18n="sx.a4h">Cover and description</h3><p data-i18n="sx.a4p">Generate a cover image and a book description ready for store pages.</p></div>
+      <div class="card reveal"><span class="ic" aria-hidden="true">◈</span><h3 data-i18n="sx.a5h">English edition</h3><p data-i18n="sx.a5p">Prepare an English translation of your book.</p></div>
+      <div class="card reveal"><span class="ic" aria-hidden="true">◎</span><h3 data-i18n="sx.a6h">Analysis and assistant</h3><p data-i18n="sx.a6p">A deep read of genre and style, and a voice or text assistant for commands.</p></div>
+    </div>
   </div>
 </section>
 
-<section class="band">
+<section id="plans" class="band">
   <div class="wrap">
     <header class="sec-head reveal"><p class="eyebrow" data-i18n="sx.plans.eye">Plans</p><h2 data-i18n="sx.plans.h2">Write for free. Publish with Pro.</h2></header>
     <div class="plans">
-      <div class="plan reveal"><h3 data-i18n="sx.free.h">Free</h3><p class="price" data-i18n="sx.free.p">£0</p><ul class="ticks"><li data-i18n="sx.free.b1">Writing, editing and book layout</li><li data-i18n="sx.free.b2">Automatic chapters, word counts, offline work</li><li data-i18n="sx.free.b3">Autosave and project backup</li><li data-i18n="sx.free.b4">Light and dark theme</li></ul></div>
-      <div class="plan pro reveal"><h3 data-i18n="sx.pro.h">Scribnox Pro</h3><p class="price" data-i18n="sx.pro.p">£7.99 / month</p><ul class="ticks"><li data-i18n="sx.pro.b1">Book files: EPUB, PDF, DOCX and publication ZIP</li><li data-i18n="sx.pro.b2">Publishing assistant with store readiness checks</li><li data-i18n="sx.pro.b3">All AI tools with your own key</li><li data-i18n="sx.pro.b4">10 colourful app backgrounds</li></ul></div>
+      <div class="plan reveal"><h3 data-i18n="sx.free.h">Free</h3><p class="price">£0</p><ul class="ticks"><li data-i18n="sx.free.b1">Writing, editing and book layout</li><li data-i18n="sx.free.b2">Automatic chapters, word counts, offline work</li><li data-i18n="sx.free.b3">Autosave and project backup</li><li data-i18n="sx.free.b4">Light and dark theme</li></ul></div>
+      <div class="plan pro reveal"><h3>Scribnox Pro</h3><p class="price" data-i18n="sx.pro.p">£7.99 / month</p><ul class="ticks"><li data-i18n="sx.pro.b1">Book files: EPUB, PDF, DOCX, FB2 and a publication ZIP</li><li data-i18n="sx.pro.b2">Publishing assistant with store readiness checks</li><li data-i18n="sx.pro.b3">All AI tools with your own key</li><li data-i18n="sx.pro.b4">10 colourful app backgrounds</li></ul></div>
     </div>
     <p class="note" data-i18n="sx.priv">Your books stay on your device. Text goes to an AI provider only when you use an AI feature, with your own key.</p>
+    <p class="note" data-i18n="price.note">Prices are in GBP. The Microsoft Store shows the price in your local currency.</p>
   </div>
 </section>
 
@@ -125,19 +149,22 @@
   <div class="wrap contact-in reveal">
     <h2 data-i18n="sx.end.h">Your book deserves to be finished.</h2>
     <p data-i18n="sx.end.p">Free on the Microsoft Store for Windows.</p>
-    <div class="cta center"><a class="store-badge" href="https://apps.microsoft.com/detail/9PL5TT6W1RSF?mode=full" target="_blank" rel="noopener"><img data-badge src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" width="166" height="52"></a></div>
+    <div class="cta center"><a class="store-badge" href="https://apps.microsoft.com/detail/9PL5TT6W1RSF?mode=full" target="_blank" rel="noopener"><img data-badge src="https://get.microsoft.com/images/en-us%20light.svg" data-ru-src="https://get.microsoft.com/images/ru%20light.svg" alt="Get Scribnox from Microsoft" data-i18n-attr="alt:badge.sx" width="166" height="52" loading="lazy"></a></div>
   </div>
 </section>
 
 </main>
 <footer class="foot">
   <div class="wrap foot-in">
-    <span>© <span id="year">2026</span> eluZ1uM Technologies</span>
-    <a href="../" data-i18n="sub.home">eluZ1uM Technologies — home</a>
-    <a href="https://apps.microsoft.com/detail/9PL5TT6W1RSF" target="_blank" rel="noopener">Scribnox</a> · <a href="https://apps.microsoft.com/detail/9NWDJV026M44" target="_blank" rel="noopener">Helmavio</a>
+    <span>© <span id="year">2026</span> eluZ1uM Technologies · <span data-i18n="ft.made">Made in Glasgow.</span></span>
+    <nav aria-label="Footer" data-i18n-attr="aria-label:ft.nav">
+      <a href="../" data-i18n="ft.home">Studio</a>
+      <a href="../helmavio/">Helmavio</a>
+      <a href="../#contact" data-i18n="nav.contact">Contact</a>
+      <a href="https://github.com/eluZ1uM" target="_blank" rel="noopener">GitHub</a>
+    </nav>
   </div>
 </footer>
-<script src="../assets/pages-ru.js"></script>
 <script src="../assets/site.js"></script>
 </body>
 </html>
