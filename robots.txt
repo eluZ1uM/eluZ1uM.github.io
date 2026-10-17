@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /oauth/
+Disallow: /work-log/
 
 Sitemap: https://eluz1um.github.io/sitemap.xml

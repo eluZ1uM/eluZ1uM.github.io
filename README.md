@@ -13,6 +13,7 @@ Static site for https://eluz1um.github.io (GitHub Pages, no server-side build).
 - `404.html` — bilingual "page not found" (absolute paths, GitHub Pages serves it for any missing URL)
 - `oauth/` — sign-in relay for the Helmavio desktop app (not linked, `noindex`, blocked in `robots.txt`)
 - `sitemap.xml`, `robots.txt` — for search engines (sitemap is generated)
+- `work-log/` — reports on each piece of work done on the site (Russian)
 
 ## Editing text
 
